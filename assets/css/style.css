@@ -7,6 +7,13 @@ body{
   font-family: 'Open Sans',sans-serif;
   color: black;
 }
+.divider{
+  width: 100px;
+  color:transparent;
+  background-color: #149ddd;
+  height: 5px;
+  
+}
 a{
   color: #149ddd;
   text-decoration: none;
@@ -15,6 +22,11 @@ a:hover{
   color: #37b3ed;
   text-decoration: none;
 }
+main{
+  margin-left: 300px;
+}
+
+/* Header */
 #header{
   
   position: fixed;
@@ -69,7 +81,7 @@ a:hover{
   text-decoration: none;
 }
 .navbar{
-  padding: 30px 0 0 0;
+  padding: 10px 0 0 0;
 }
 .navbar a,
 .navbar a:focus
@@ -121,4 +133,162 @@ a:hover{
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
+}
+
+/* Hero Section */
+
+#hero{
+  /* width: 100%; */
+  height: 100vh;
+  background-image: url('../img/hero-bg.jpg');
+  background-size: cover;
+  position: relative;
+  color:#fff;
+}
+
+#hero::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+#hero .hero-container{
+  margin: 0 auto;
+  position: relative;
+  z-index: 4;
+  margin-left: 100px;
+}
+#hero h1{
+  margin: 0 0 10px 0;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 56px;
+ 
+}
+#hero p{
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+#about{
+  padding: 10px;
+}
+/* About Section */
+#about h3,#about h2{
+  font-weight: 700;
+  font-size: 26px;
+  color: #1736bc;
+}
+#about ul{
+  list-style: none;
+  padding: 0;
+}
+
+#about ul li{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+#about ul li strong{
+  margin-right: 10px;
+}
+#about ul li i{
+  color: #149ddd;
+  font-size: 24px;
+  font-weight: lighter;
+}
+#about .about-intro{
+  font-style: italic;
+}
+
+/* Facts Section */
+
+.count-box{
+  padding: 30px;
+}
+.count-box i{
+  color: #149ddd;
+  font-size: 42px;
+}
+.count-box span{
+  font-size: 40px;
+  font-weight: 700;
+
+}
+.count-box p{
+  padding: 15px 0 0 0;
+  margin: 0 0 0 45px;
+  font-size: 13px;
+}
+
+/* Skills Section */
+.skills .progress{
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill{
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.skills .progress .skill .val{
+  float: right;
+  /* font-weight: ; */
+}
+.progress-bar-wrap{
+  background-color: whitesmoke;
+  height: 10px;
+}
+.progress-bar{
+  background-color: #149ddd;
+  height: 10px;
+}
+/* REsume section */
+.resume{
+  padding: 10px;
+}
+.resume .resume-title{
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+
+}
+.resume .resume-item{
+  padding: 0 0 20px 20px;
+  border-left: 2px solid #1736bc;
+  position: relative;
+}
+.resume .resume-item h4{
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+}
+.resume .resume-item::before{
+  content: "";
+  position: absolute;
+  top:0;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #149ddd;
+}
+.resume .resume-box{
+  padding: 10px;
+  display: inline-block;
+  font-weight: 700;
+  background-color: #e4edf9;
+}
+.resume .address{
+  margin-top: 15px;
 }
