@@ -47,3 +47,26 @@ if(skills_element){
         handler:handle_waypoint
     })
 }
+
+
+window.addEventListener("load",()=>{
+    const portfolio=document.querySelector('.portfolio-container')
+console.log(portfolio)
+var iso = new Isotope( portfolio, {
+    // options
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows'
+  });
+  const filter_btn=document.querySelectorAll('.portfolio-filters li')
+  console.log(filter_btn)
+  filter_btn.forEach(el=>{
+    el.addEventListener('click',function(e){
+        e.preventDefault();
+            iso.arrange({
+                filter:el.getAttribute('data-filter')
+            })
+            // iso.on
+          })
+  })
+  
+})

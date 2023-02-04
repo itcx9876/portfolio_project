@@ -623,3 +623,65 @@ main{
     display: inline-block;
   }
 }
+.section-bg{
+  background-color: #f5f8fd;
+}
+/* Portfolio */
+.portfolio .portfolio-filters{
+  padding: 2px 15px;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+}
+.portfolio .portfolio-filters li{
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  color: #212431;
+  transition: all .3s ease-in-out;
+}
+.portfolio .portfolio-filters li:hover{
+  color: blue;
+}
+
+.portfolio .portfolio-wrap{
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+.portfolio .portfolio-wrap::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  right: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  z-index: inherit;
+}
+
+.portfolio .portfolio-wrap .portfolio-links{
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 6;
+  display: flex;
+  transition: all 0.3 ease-in-out;
+  justify-content: center;
+}
+.portfolio .portfolio-wrap .portfolio-links a{
+  color:#fff;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(20, 157, 221, 0.75);
+  width: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover{
+  background: rgba(20, 157, 221, 0.95);
+}
