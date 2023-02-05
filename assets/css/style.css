@@ -651,6 +651,7 @@ main{
   overflow: hidden;
   z-index: 2;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio .portfolio-wrap::before{
   content: "";
@@ -662,6 +663,7 @@ main{
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   z-index: inherit;
+  transition: all 0.3s ease-in;
 }
 
 .portfolio .portfolio-wrap .portfolio-links{
@@ -672,7 +674,7 @@ main{
   bottom: -60px;
   z-index: 6;
   display: flex;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
   justify-content: center;
 }
 .portfolio .portfolio-wrap .portfolio-links a{
@@ -684,4 +686,19 @@ main{
 }
 .portfolio .portfolio-wrap .portfolio-links a:hover{
   background: rgba(20, 157, 221, 0.95);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.portfolio  .portfolio-wrap:hover::before{
+  
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-links{
+  bottom: 0;
+}
+.filter-active{
+color: #149ddd !important;
 }

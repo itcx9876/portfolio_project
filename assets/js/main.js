@@ -1,3 +1,4 @@
+
 AOS.init({
     duration:1000,
     easing:'ease-in-out',
@@ -62,6 +63,12 @@ var iso = new Isotope( portfolio, {
   filter_btn.forEach(el=>{
     el.addEventListener('click',function(e){
         e.preventDefault();
+        filter_btn.forEach(btn=>{
+            btn.classList.remove('filter-active')
+            
+        })
+        
+        this.classList.add('filter-active')
             iso.arrange({
                 filter:el.getAttribute('data-filter')
             })
@@ -70,3 +77,10 @@ var iso = new Isotope( portfolio, {
   })
   
 })
+
+
+// Portfolio gallery with glightbox
+
+const lightbox = GLightbox({
+   selector:'.portfolio-lightbox'
+});
